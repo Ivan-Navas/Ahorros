@@ -1,0 +1,222 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  background-color: #0c0f1d;
+}
+body {
+  font-family: "roboto", sans-serif;
+}
+
+.header {
+  background-color: #1b1d2a;
+  color: #fff;
+  display: grid;
+  grid-template-columns: 80% 20%;
+  padding: 20px;
+  margin: 20px;
+  border-radius: 16px;
+  align-items: center;
+}
+.tituloHeader {
+  background-color: #1b1d2a;
+}
+.botonHeader {
+  background-color: #1b1d2a;
+  border: none;
+  margin: 20px;
+  color: #fff;
+  font-size: 16px;
+  padding: 20px;
+  border-radius: 16px;
+  font-weight: 600;
+  font-family: "roboto", sans-serif;
+}
+.botonHeader:hover {
+  animation-name: colores;
+  animation-duration: 1s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+@keyframes colores {
+  0% {
+    background-color: #1b1d2a;
+  }
+  12.5% {
+    background-color: #3c5053;
+  }
+  25% {
+    background-color: #45858f;
+  }
+  37.5% {
+    background-color: #31a6b8;
+  }
+  50% {
+    background-color: #00ddff;
+  }
+  62.5% {
+    background-color: #31a6b8;
+  }
+  75% {
+    background-color: #45858f;
+  }
+  87.5% {
+    background-color: #3c5053;
+  }
+  100% {
+    background-color: #1b1d2a;
+  }
+}
+.dato {
+  padding: 10px;
+  border: none;
+  border-bottom: 1px #1b1d2a solid;
+  font-family: "roboto", sans-serif;
+  outline: none;
+  background: #fff;
+  margin: 10px;
+}
+.dato:focus {
+  transition: 0.5s;
+  border-bottom: 1px #00ddff solid;
+}
+
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.boton {
+  background-color: #1b1d2a;
+  border: none;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 600;
+  padding: 10px;
+  border-radius: 10px;
+  cursor: pointer;
+  margin-left: 20px;
+}
+
+.inputs {
+  background-color: #fff;
+}
+.boton:hover {
+  animation-name: colores;
+  animation-duration: 1s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+
+@keyframes colores {
+  0% {
+    background-color: #1b1d2a;
+  }
+  12.5% {
+    background-color: #3c5053;
+  }
+  25% {
+    background-color: #45858f;
+  }
+  37.5% {
+    background-color: #31a6b8;
+  }
+  50% {
+    background-color: #00ddff;
+  }
+  62.5% {
+    background-color: #31a6b8;
+  }
+  75% {
+    background-color: #45858f;
+  }
+  87.5% {
+    background-color: #3c5053;
+  }
+  100% {
+    background-color: #1b1d2a;
+  }
+}
+.contenedorPrincipal {
+  background-color: #fff;
+  min-height: 100px;
+  border-radius: 16px;
+  margin: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.objetivo-contenedor {
+  background-color: #fff;
+  width: 80%;
+  display: grid;
+  grid-template-columns: 33% 33% 33%;
+  text-align: center;
+  height: 100px;
+  padding: 35px;
+  border-radius: 16px;
+}
+.contenido {
+  background-color: #fff;
+  overflow-wrap: anywhere;
+}
+
+.porcentaje {
+  height: 2px;
+  margin-top: 10px;
+  border-radius: 16px;
+  grid-column: 1/4;
+  display: flex;
+  align-items: center;
+}
+.dentro {
+  height: 10px;
+  background-color: #00ddff;
+  box-shadow: 1px 1px 2px 1px #00ddff;
+  text-align: end;
+  border-radius: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: end;
+}
+.valorPorcentaje {
+  background-color: transparent;
+  font-size: 12px;
+  font-weight: 600;
+}
+.iconos {
+  background-color: #fff;
+  width: 100%;
+  height: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  grid-column: 1/4;
+  margin-top: 10px;
+}
+.botonObjetivo {
+  background-color: #fff;
+  height: 20px;
+  width: 20%;
+  border: none;
+}
+.botonDentro {
+  background-color: #fff;
+  cursor: pointer;
+  font-size: 20px;
+}
+.listaObjetivoContenedor{
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 20px;
+  background-color: #fff;
+}
+
+.conObjetivo{
+  display: flex;
+  justify-content: center;
+}
