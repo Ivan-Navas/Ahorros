@@ -1,8 +1,8 @@
 import React, { useState } from "react";
-import { Modal } from "./Modal";
+import { Modal } from "./FormularioModal";
 import '../css/estilos.css'
 import { Objetivo } from "./Objetivo";
-import { Input } from "./Input";
+
 
 export const ListaDeObjetivos = () => {
   const [objetivos, setObjetivo] = useState([]);
@@ -19,9 +19,8 @@ export const ListaDeObjetivos = () => {
   }
   return (
     <>
-    <Input onClick={agregarObjetivo}/>
-      <Modal 
-      /> 
+    <Modal onSubmit={agregarObjetivo}/>
+      
       <div className="listaObjetivoContenedor">
         {
           objetivos.map((objetivo)=>{

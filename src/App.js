@@ -1,11 +1,12 @@
 import React, { useState } from "react";
-import { Modal } from "./componentes/Modal";
+import { Modal } from "./componentes/FormularioModal";
 import styled from "styled-components";
 import { Input } from "./componentes/Input";
 import { ListaDeObjetivos } from "./componentes/ListaDeObjetivos";
 import { Objetivo } from "./componentes/Objetivo";
 import './css/estilos.css'
 import "./App.css";
+import { Propose } from "./componentes/Propose";
 
 function App() {
   const Contenedor = styled.div`
@@ -81,12 +82,17 @@ function App() {
         titulo="Añadir Objetivo"
         estado={estadoModal1}
         cambiarEstado={cambiarEstadoModal1}
+        Aceptar = {()=>{
+          alert("Hola mundo")
+        }}
       >
       </Modal>
       
       <div className="conObjetivo">
-        <Objetivo/>
+        
       </div>
+
+      {/* <Propose/> */}
     </div>
     
   );

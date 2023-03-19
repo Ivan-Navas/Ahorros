@@ -141,6 +141,9 @@ input[type="number"]::-webkit-inner-spin-button {
     background-color: #1b1d2a;
   }
 }
+.formulario{
+  background-color: #fff;
+}
 .contenedorPrincipal {
   background-color: #fff;
   min-height: 100px;

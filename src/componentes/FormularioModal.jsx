@@ -1,10 +1,35 @@
-import React from "react";
+import React, {useState} from "react";
 import styled from "styled-components";
 import "../css/estilos.css";
 import { AiOutlineClose } from "react-icons/ai";
+import {v4 as uuidv4} from 'uuid'
+import { ListaDeObjetivos } from "./ListaDeObjetivos";
 
-export const Modal = ({ titulo, children, estado, cambiarEstado }) => {
+export const Modal = ({onSubmit, estado, titulo, cambiarEstado, children}) => {
+  
+  const [nombre, setNombre] = useState('');
+  const [cantidad, setCantidad] = useState('');
+
+  const manejarCambioNombre = n =>{
+    setNombre(n.target.value);
+    console.log(n.target.value)
+  }
+  const manejarCambioCantidad = c =>{
+    setCantidad(c.target.value);
+    console.log(c.target.value);
+  }
+  const manejarEnvio = e =>{
+    e.preventDefault();
+    const tareaNueva = {
+      id: uuidv4(),
+      nombre: nombre,
+      cantidad: cantidad
+    }
+    onSubmit(tareaNueva);
+  }
+  
   return (
+   
     <>
       {estado && (
         <Overlay className="overlay">
@@ -13,11 +38,16 @@ export const Modal = ({ titulo, children, estado, cambiarEstado }) => {
               <h3 className="tituloModal">{titulo}</h3>
             </EncabezadoModal>
             <div className="inputs">
-              <input className="dato" placeholder="Nombre Objetivo"></input>
+              <form class="formulario" onSubmit={manejarEnvio} >
+              <input className="dato" placeholder="Nombre Objetivo" onChange={manejarCambioNombre}></input>
 
-              <input className="dato" placeholder="Cantidad Objetivo"></input>
+<input type='number' className="dato" placeholder="Cantidad Objetivo" onChange={manejarCambioCantidad}></input>
 
-              <button className="boton">Aceptar</button>
+<button className="boton"
+
+>Aceptar</button>
+              </form>
+              
             </div>
             <BotonCerrar onClick={() => cambiarEstado(!estado)}>
               <AiOutlineClose className="cerrar" />
